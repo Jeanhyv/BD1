@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actividad ERP - BrittosMarket</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="presentation">
+
+    <section class="slide active cover">
+      <div>
+        <p class="tag">Actividad 1.1 · Conceptos de las bases de datos</p>
+        <h1>BrittosMarket</h1>
+        <h2>Proceso de registro de ventas y relación con ERP</h2>
+        <p class="small">Presentación tipo diapositivas con navegación por flechas.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Objetivo</h2>
+      <p>
+        Comprender cómo el modelado de procesos y las características de un sistema ERP
+        apoyan la gestión de información dentro de una empresa.
+      </p>
+      <p>
+        En este caso se analiza la empresa ficticia <strong>BrittosMarket</strong>,
+        enfocándose en el proceso de registro de ventas.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Empresa seleccionada</h2>
+      <div class="two-columns">
+        <div>
+          <h3>BrittosMarket</h3>
+          <p>
+            BrittosMarket es una empresa ficticia dedicada a la venta de productos de consumo.
+            Su operación requiere controlar ventas, inventario, compras, caja y reportes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Proceso elegido</h3>
+          <p class="big-text">Registro de ventas</p>
+          <p>Este proceso conecta al cliente, cajero, sistema ERP e inventario.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Conceptos principales</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th>Descripción breve</th>
+            <th>Ejemplo en BrittosMarket</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BPMN</td>
+            <td>Representa procesos mediante diagramas.</td>
+            <td>Diagrama de venta de producto.</td>
+          </tr>
+          <tr>
+            <td>ERP</td>
+            <td>Sistema que integra áreas de una empresa.</td>
+            <td>Ventas conectadas con inventario.</td>
+          </tr>
+          <tr>
+            <td>Modularidad</td>
+            <td>Divide el sistema en módulos.</td>
+            <td>Módulo de ventas, compras y almacén.</td>
+          </tr>
+          <tr>
+            <td>Seguridad</td>
+            <td>Protege datos y controla accesos.</td>
+            <td>Solo el gerente modifica precios.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <h2>Características ERP</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Flexibilidad</h3>
+          <p>Permite modificar productos, precios o promociones.</p>
+        </div>
+        <div class="card">
+          <h3>Conectividad</h3>
+          <p>Comunica ventas, almacén, caja y reportes.</p>
+        </div>
+        <div class="card">
+          <h3>Adaptabilidad</h3>
+          <p>Ayuda a crecer o cambiar procesos según la necesidad.</p>
+        </div>
+        <div class="card">
+          <h3>Seguridad</h3>
+          <p>Evita accesos no autorizados a información importante.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Investigación breve</h2>
+      <div class="qa">
+        <p><strong>¿Qué es BPMN?</strong> Es una forma gráfica de representar procesos para entenderlos y mejorarlos.</p>
+        <p><strong>¿Qué es modelar procesos?</strong> Es representar paso a paso cómo funciona una actividad.</p>
+        <p><strong>¿Por qué un ERP debe ser flexible?</strong> Porque la empresa cambia y el sistema debe adaptarse.</p>
+        <p><strong>¿Qué aporta la conectividad?</strong> Permite compartir información en tiempo real entre áreas.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Proceso: Registro de ventas</h2>
+      <ol class="steps">
+        <li>El cliente selecciona productos.</li>
+        <li>El cajero escanea los productos.</li>
+        <li>El sistema consulta precios y disponibilidad.</li>
+        <li>El cliente realiza el pago.</li>
+        <li>El sistema registra la venta y actualiza inventario.</li>
+        <li>Se genera el ticket y termina el proceso.</li>
+      </ol>
+    </section>
+
+    <section class="slide image-slide">
+      <h2>Parte A: Diagrama BPMN</h2>
+      <img src="assets/diagrama_bpmn_brittosmarket.png" alt="Diagrama BPMN del proceso de registro de ventas de BrittosMarket" />
+    </section>
+
+    <section class="slide">
+      <h2>Parte B: Relación con ERP</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Proceso</th>
+            <th>Área</th>
+            <th>Característica ERP</th>
+            <th>Justificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Registro de ventas</td>
+            <td>Comercial</td>
+            <td>Conectividad</td>
+            <td>Conecta caja, inventario y reportes.</td>
+          </tr>
+          <tr>
+            <td>Compras</td>
+            <td>Logística</td>
+            <td>Modularidad</td>
+            <td>Permite controlar pedidos a proveedores.</td>
+          </tr>
+          <tr>
+            <td>Inventario</td>
+            <td>Almacén</td>
+            <td>Seguridad</td>
+            <td>Controla quién modifica existencias.</td>
+          </tr>
+          <tr>
+            <td>Cambio de precios</td>
+            <td>Administración</td>
+            <td>Flexibilidad</td>
+            <td>Facilita actualizar precios y promociones.</td>
+          </tr>
+          <tr>
+            <td>Reportes</td>
+            <td>Gerencia</td>
+            <td>Adaptabilidad</td>
+            <td>Ayuda a tomar decisiones con datos actuales.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <h2>Importancia para BI</h2>
+      <p>
+        El ERP genera datos organizados sobre ventas, inventario y compras.
+        Estos datos pueden analizarse con herramientas de Business Intelligence para crear reportes,
+        detectar productos más vendidos y tomar mejores decisiones.
+      </p>
+      <div class="highlight">
+        ERP + datos ordenados = mejor análisis para la empresa.
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Conclusión</h2>
+      <p>
+        En BrittosMarket, el ERP permite integrar áreas como ventas, almacén y administración.
+        El uso de BPMN ayuda a visualizar el proceso de registro de ventas y detectar cómo fluye
+        la información dentro de la empresa.
+      </p>
+      <p>
+        Gracias a características como flexibilidad, modularidad, conectividad, adaptabilidad y seguridad,
+        la empresa puede trabajar de forma más ordenada y eficiente.
+      </p>
+    </section>
+
+    <section class="slide cover">
+      <div>
+        <h1>Fin</h1>
+        <h2>Actividad ERP · BrittosMarket</h2>
+        <p class="small">Usa ← → para moverte entre diapositivas.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="controls">
+    <button id="prevBtn">←</button>
+    <span id="counter">1 / 12</span>
+    <button id="nextBtn">→</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
