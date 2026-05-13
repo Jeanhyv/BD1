@@ -152,24 +152,6 @@ td {
   margin-bottom: 16px;
 }
 
-.image-slide {
-  padding: 35px 50px 80px;
-}
-
-.image-slide h2 {
-  margin-bottom: 15px;
-  font-size: 34px;
-}
-
-.image-slide img {
-  width: 100%;
-  max-height: 78vh;
-  object-fit: contain;
-  background: white;
-  border: 1px solid #cbd5e1;
-  border-radius: 12px;
-}
-
 .highlight {
   margin-top: 35px;
   padding: 24px;
@@ -178,6 +160,129 @@ td {
   border-radius: 12px;
   font-size: 32px;
   font-weight: bold;
+}
+
+/* Diagrama hecho en HTML/CSS para evitar fallas de carga de imagen */
+.diagram-slide {
+  padding: 35px 45px 80px;
+}
+
+.diagram-slide h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.diagram {
+  background: white;
+  border: 2px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 12px;
+  height: 82vh;
+  overflow: auto;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.lane-title {
+  background: #1e3a8a;
+  color: white;
+  font-weight: bold;
+  padding: 7px 12px;
+  border-radius: 8px 8px 0 0;
+  font-size: 18px;
+}
+
+.lane {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-top: none;
+  margin-bottom: 6px;
+  overflow-x: auto;
+}
+
+.node {
+  flex: 0 0 auto;
+  min-width: 125px;
+  max-width: 180px;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.task {
+  background: #eff6ff;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+}
+
+.start {
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #bbf7d0;
+  border: 3px solid #16a34a;
+}
+
+.end {
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fecaca;
+  border: 3px solid #dc2626;
+}
+
+.decision {
+  width: 95px;
+  min-width: 95px;
+  height: 95px;
+  background: #fef9c3;
+  border: 2px solid #ca8a04;
+  transform: rotate(45deg);
+}
+
+.decision {
+  font-size: 13px;
+}
+
+.decision::first-line {
+  transform: rotate(-45deg);
+}
+
+.database {
+  background: #f1f5f9;
+  border: 2px solid #64748b;
+  border-radius: 50% / 18%;
+}
+
+.arrow {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.spacer {
+  width: 95px;
+  flex: 0 0 auto;
+}
+
+.note {
+  margin-top: 8px;
+  background: #dbeafe;
+  border-left: 8px solid #1e3a8a;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 8px;
 }
 
 .controls {
@@ -236,10 +341,6 @@ td {
   .two-columns,
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  table {
-    font-size: 14px;
   }
 
   th, td {

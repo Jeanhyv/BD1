@@ -14,7 +14,7 @@
         <p class="tag">Actividad 1.1 · Conceptos de las bases de datos</p>
         <h1>BrittosMarket</h1>
         <h2>Proceso de registro de ventas y relación con ERP</h2>
-        <p class="small">Presentación tipo diapositivas con navegación por flechas.</p>
+        <p class="small">Usa las flechas ← → para cambiar de diapositiva.</p>
       </div>
     </section>
 
@@ -59,26 +59,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>BPMN</td>
-            <td>Representa procesos mediante diagramas.</td>
-            <td>Diagrama de venta de producto.</td>
-          </tr>
-          <tr>
-            <td>ERP</td>
-            <td>Sistema que integra áreas de una empresa.</td>
-            <td>Ventas conectadas con inventario.</td>
-          </tr>
-          <tr>
-            <td>Modularidad</td>
-            <td>Divide el sistema en módulos.</td>
-            <td>Módulo de ventas, compras y almacén.</td>
-          </tr>
-          <tr>
-            <td>Seguridad</td>
-            <td>Protege datos y controla accesos.</td>
-            <td>Solo el gerente modifica precios.</td>
-          </tr>
+          <tr><td>BPMN</td><td>Representa procesos mediante diagramas.</td><td>Diagrama de venta de producto.</td></tr>
+          <tr><td>ERP</td><td>Sistema que integra áreas de una empresa.</td><td>Ventas conectadas con inventario.</td></tr>
+          <tr><td>Modularidad</td><td>Divide el sistema en módulos.</td><td>Módulo de ventas, compras y almacén.</td></tr>
+          <tr><td>Seguridad</td><td>Protege datos y controla accesos.</td><td>Solo el gerente modifica precios.</td></tr>
         </tbody>
       </table>
     </section>
@@ -86,22 +70,10 @@
     <section class="slide">
       <h2>Características ERP</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Flexibilidad</h3>
-          <p>Permite modificar productos, precios o promociones.</p>
-        </div>
-        <div class="card">
-          <h3>Conectividad</h3>
-          <p>Comunica ventas, almacén, caja y reportes.</p>
-        </div>
-        <div class="card">
-          <h3>Adaptabilidad</h3>
-          <p>Ayuda a crecer o cambiar procesos según la necesidad.</p>
-        </div>
-        <div class="card">
-          <h3>Seguridad</h3>
-          <p>Evita accesos no autorizados a información importante.</p>
-        </div>
+        <div class="card"><h3>Flexibilidad</h3><p>Permite modificar productos, precios o promociones.</p></div>
+        <div class="card"><h3>Conectividad</h3><p>Comunica ventas, almacén, caja y reportes.</p></div>
+        <div class="card"><h3>Adaptabilidad</h3><p>Ayuda a crecer o cambiar procesos según la necesidad.</p></div>
+        <div class="card"><h3>Seguridad</h3><p>Evita accesos no autorizados a información importante.</p></div>
       </div>
     </section>
 
@@ -127,9 +99,62 @@
       </ol>
     </section>
 
-    <section class="slide image-slide">
+    <section class="slide diagram-slide">
       <h2>Parte A: Diagrama BPMN</h2>
-      <img src="assets/diagrama_bpmn_brittosmarket.png" alt="Diagrama BPMN del proceso de registro de ventas de BrittosMarket" />
+
+      <div class="diagram">
+        <div class="lane-title">Cliente</div>
+        <div class="lane">
+          <div class="node start">Inicio</div>
+          <div class="arrow">→</div>
+          <div class="node task">Selecciona productos</div>
+          <div class="arrow down">↓</div>
+          <div class="spacer"></div>
+          <div class="node task right">Recibe productos y ticket</div>
+          <div class="arrow">→</div>
+          <div class="node end">Fin</div>
+        </div>
+
+        <div class="lane-title">Cajero</div>
+        <div class="lane">
+          <div class="spacer"></div>
+          <div class="node task">Escanea productos</div>
+          <div class="arrow down">↓</div>
+          <div class="node task">Cobra al cliente</div>
+          <div class="arrow">→</div>
+          <div class="node task">Entrega productos y ticket</div>
+        </div>
+
+        <div class="lane-title">Sistema ERP</div>
+        <div class="lane">
+          <div class="spacer"></div>
+          <div class="node task">Consulta precios en base de datos</div>
+          <div class="arrow">→</div>
+          <div class="node decision">¿Disponible?</div>
+          <div class="arrow">Sí →</div>
+          <div class="node task">Calcula total</div>
+          <div class="arrow">→</div>
+          <div class="node decision">¿Pago aprobado?</div>
+          <div class="arrow">Sí →</div>
+          <div class="node task">Registra venta</div>
+          <div class="arrow">→</div>
+          <div class="node task">Genera ticket</div>
+        </div>
+
+        <div class="lane-title">Base de datos</div>
+        <div class="lane">
+          <div class="spacer"></div>
+          <div class="node database">Productos y precios</div>
+          <div class="arrow">→</div>
+          <div class="node database">Actualiza inventario</div>
+          <div class="arrow">→</div>
+          <div class="node database">Inventario actualizado</div>
+        </div>
+
+        <div class="note">
+          Decisiones: si no hay producto, se informa al cliente y termina el proceso. Si el pago no es aprobado, se solicita otro método de pago.
+        </div>
+      </div>
     </section>
 
     <section class="slide">
@@ -144,36 +169,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Registro de ventas</td>
-            <td>Comercial</td>
-            <td>Conectividad</td>
-            <td>Conecta caja, inventario y reportes.</td>
-          </tr>
-          <tr>
-            <td>Compras</td>
-            <td>Logística</td>
-            <td>Modularidad</td>
-            <td>Permite controlar pedidos a proveedores.</td>
-          </tr>
-          <tr>
-            <td>Inventario</td>
-            <td>Almacén</td>
-            <td>Seguridad</td>
-            <td>Controla quién modifica existencias.</td>
-          </tr>
-          <tr>
-            <td>Cambio de precios</td>
-            <td>Administración</td>
-            <td>Flexibilidad</td>
-            <td>Facilita actualizar precios y promociones.</td>
-          </tr>
-          <tr>
-            <td>Reportes</td>
-            <td>Gerencia</td>
-            <td>Adaptabilidad</td>
-            <td>Ayuda a tomar decisiones con datos actuales.</td>
-          </tr>
+          <tr><td>Registro de ventas</td><td>Comercial</td><td>Conectividad</td><td>Conecta caja, inventario y reportes.</td></tr>
+          <tr><td>Compras</td><td>Logística</td><td>Modularidad</td><td>Permite controlar pedidos a proveedores.</td></tr>
+          <tr><td>Inventario</td><td>Almacén</td><td>Seguridad</td><td>Controla quién modifica existencias.</td></tr>
+          <tr><td>Cambio de precios</td><td>Administración</td><td>Flexibilidad</td><td>Facilita actualizar precios y promociones.</td></tr>
+          <tr><td>Reportes</td><td>Gerencia</td><td>Adaptabilidad</td><td>Ayuda a tomar decisiones con datos actuales.</td></tr>
         </tbody>
       </table>
     </section>
@@ -185,9 +185,7 @@
         Estos datos pueden analizarse con herramientas de Business Intelligence para crear reportes,
         detectar productos más vendidos y tomar mejores decisiones.
       </p>
-      <div class="highlight">
-        ERP + datos ordenados = mejor análisis para la empresa.
-      </div>
+      <div class="highlight">ERP + datos ordenados = mejor análisis para la empresa.</div>
     </section>
 
     <section class="slide">

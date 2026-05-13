@@ -1,20 +1,14 @@
 # Presentación BrittosMarket
 
-Archivos incluidos:
+Esta versión no depende de imágenes externas para el diagrama BPMN.
+El diagrama está construido directamente con HTML y CSS, por eso debe cargar correctamente en GitHub Pages.
 
+Archivos:
 - index.html
 - styles.css
 - script.js
-- assets/diagrama_bpmn_brittosmarket.png
 
 Uso:
-1. Sube toda la carpeta a GitHub.
-2. Activa GitHub Pages si quieres verla en línea.
-3. Abre `index.html`.
-4. Navega con flecha derecha e izquierda.
-
-Controles:
-- Flecha derecha: avanzar.
-- Flecha izquierda: regresar.
-- Home: primera diapositiva.
-- End: última diapositiva.
+1. Sube los tres archivos al repositorio.
+2. Abre index.html o activa GitHub Pages.
+3. Usa flecha derecha e izquierda para avanzar o regresar.
